@@ -1,0 +1,58 @@
+<!--   banner  -->
+<div>
+
+  <div id="banner" class="conteiner d-lg-block ">
+    <img [src]="miPortfolio.persona.imgBanner" class="img-fluid">
+  </div>
+
+  <div id="FotoPerfil" class="container">
+    <div class="row">
+      <div class="col-12 pt-3 ">
+        <h4 class="text-end "><i class="bi bi-pencil-square p-1" data-bs-toggle="modal"
+            data-bs-target="#editarBanner"></i></h4>
+      </div>
+    </div>
+    <img [src]="miPortfolio.persona.imgPerfil" height=250px width=250px>
+    <h1>{{miPortfolio.persona.nombrePerfil}}</h1>
+    <h2>{{miPortfolio.persona.titulo}}</h2>
+  </div>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="editarBanner" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content ">
+      <div class="modal-header custom">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Persona</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body custom">
+        <div class="form-group">
+          <label for="imgBanner">Imagen del Banner</label>
+          <input type="text" class="form-control" id="imgBanner" name="imgBanner" requerid>
+        </div>
+
+        <div class="form-group">
+          <label for="imgPerfil">Imagen de Perfil</label>
+          <input type="text" class="form-control" id="imgPerfil" name="imgPerfil" requerid>
+        </div>
+
+        <div class="form-group">
+          <label for="nombrePerfil">Nombre de Perfil</label>
+          <input type="text" class="form-control" id="nombrePerfil" name="nombrePerfil" requerid>
+        </div>
+
+        <div class="form-group">
+          <label for="titulo">Titulo</label>
+          <input type="text" class="form-control" id="titulo" name="titulo" requerid>
+        </div>
+
+      </div>
+      <div class="modal-footer justify-content-center" id="Custom">
+        <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,311 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <ul class="Moditems">
+
+                <div id="Proyectocolor1" class="card mb-3" style="max-width: 600px;">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>Educacion</h4>
+                            </div>
+                            <div class="col-6">
+                                <h4 class="text-end ">
+                                    <i class="bi bi-file-earmark-plus" data-bs-toggle="modal"
+                                        data-bs-target="#agregarEducacion"></i>
+                                </h4>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+
+                        <li>
+                            <div class="row">
+                                <div class="col-lg-3 ">
+                                    <img [src]="miPortfolio.educacion.logo" class="img-fluid" />
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="row">
+                                        <div class="col-9">
+                                            <p><b>{{miPortfolio.educacion.nombreCurso}} - <p>
+                                                        {{miPortfolio.educacion.carreraCurso}}</p></b></p>
+                                        </div>
+
+                                        <div class="col-3 ">
+                                            <p class="text-end ">
+                                                <i class="bi bi-pencil-square p-1" data-bs-toggle="modal"
+                                                data-bs-target="#editarEducacion"></i>
+                                                <i class="bi bi-trash3-fill"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p>{{miPortfolio.educacion.periodoEstudiosInicio}}-{{miPortfolio.educacion.periodoEstudiosFin}}
+                                    </p>
+                                    <p><i>{{miPortfolio.educacion.titulo}}</i></p>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+
+        <div class="col-lg-6">
+            <ul class="Moditems list-group list-group-flush">
+
+                <div id="Proyectocolor1" class="card mb-3" style="max-width: 600px;">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-6">
+                                <h4>Experiencia</h4>
+                            </div>
+                            <!-- Boton -->
+                            <div class="col-6">
+                                <h4 class="text-end">
+                                    <i class="bi bi-file-earmark-plus" data-bs-toggle="modal"
+                                    data-bs-target="#agregarExperiencia"></i>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <li>
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <img [src]="miPortfolio.experienciaLaboral.imgEmpresa" width="200px"
+                                        class="img-fluid " />
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="row">
+                                        <div class="col-9 ">
+                                            <p><b>{{miPortfolio.experienciaLaboral.nombreEmpresa}}</b></p>
+                                        </div>
+
+                                        <div class="col-3 ">
+                                            <p class="text-end ">
+                                                <i class="bi bi-pencil-square p-1" data-bs-toggle="modal"
+                                                data-bs-target="#editarExperiencia"></i>
+                                                <i class="bi bi-trash3-fill"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p>{{miPortfolio.experienciaLaboral.periodoPuestoInicio}} -
+                                        {{miPortfolio.experienciaLaboral.periodoPuestoFin}}</p>
+                                    <p>{{miPortfolio.experienciaLaboral.puesto}}</p>
+                                    <p><i>{{miPortfolio.experienciaLaboral.descripcionPuesto}}</i></p>
+
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Agregar Educacion -->
+<div class="modal fade" id="agregarEducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Educacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+
+                <div class="form-group">
+                    <label for="logo">Logo de la institución</label>
+                    <input type="text" class="form-control" id="logo" name="logo"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreCurso">Nombre de la institución</label>
+                    <input type="text" class="form-control" id="nombreCurso" name="nombreCurso"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="carreraCurso">Nombre de carrera</label>
+                    <input type="text" class="form-control" id="carreraCurso"
+                        name="carreraCurso" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" class="form-control" id="titulo"
+                        name="titulo" >
+                </div>
+                <div class="form-group">
+    
+                    <label for="periodoEstudiosInicio">Periodo de iniciacion de los estudios</label>
+                    <input type="text" class="form-control" id="periodoEstudiosInicio" 
+                        name="periodoEstudiosInicio">
+                </div>
+                <div class="form-group">
+                    <label for="periodoEstudiosFin">Periodo de finalización de los estudios</label>
+                    <input type="text" class="form-control" id="periodoEstudiosFin"  name="periodoEstudiosFin" >
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal editar Educacion -->
+<div class="modal fade" id="editarEducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Educacion</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+
+
+                <div class="form-group">
+                    <label for="logo">Logo de la institución</label>
+                    <input type="text" class="form-control" id="logo" name="logo"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreCurso">Nombre de la institución</label>
+                    <input type="text" class="form-control" id="nombreCurso" name="nombreCurso"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="carreraCurso">Nombre de carrera</label>
+                    <input type="text" class="form-control" id="carreraCurso" 
+                        name="carreraCurso" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="titulo">Titulo</label>
+                    <input type="text" class="form-control" id="titulo" 
+                        name="titulo" required>
+                </div>
+                <div class="form-group">
+    
+                    <label for="periodoEstudiosInicio">Periodo de iniciacion de los estudios</label>
+                    <input type="text" class="form-control" id="periodoEstudiosInicio" 
+                        name="periodoEstudiosInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="periodoEstudiosFin">Periodo de finalización de los estudios</label>
+                    <input type="text" class="form-control" id="periodoEstudiosFin"  name="periodoEstudiosFin" required>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Agregar Experiencia -->
+<div class="modal fade" id="agregarExperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Experiencias</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion"
+                        name="descripcion" requerid>
+                </div>
+                <div class="form-group">
+                    <label for="imgEmpresa">Imagen de la Empresa</label>
+                    <input type="text" class="form-control" id="imgEmpresa" name="imgEmpresa"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="nombreEmpresa">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="nombreEmpresa" 
+                        name="nombreEmpresa" required>
+                </div>
+                <div class="form-group">
+    
+                    <label for="periodoPuestoFin">Fin del Puesto</label>
+                    <input type="text" class="form-control" id="periodoPuestoFin"
+                        name="periodoPuestoFin" required>
+                </div>
+                <div class="form-group">
+                    <label for="periodoPuestoInicio">Inicio del puesto</label>
+                    <input type="text" class="form-control" id="periodoPuestoInicio" 
+                        name="periodoPuestoInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="puesto">Puesto</label>
+                    <input type="text" class="form-control" id="puesto" name="puesto" required>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Editar Experiencia -->
+<div class="modal fade" id="editarExperiencia" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Experiencia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+                <div class="form-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        requerid>
+                </div>
+    
+                <div class="form-group">
+                    <label for="imgEmpresa">imgEmpresa</label>
+                    <input type="text" class="form-control" id="imgEmpresa"  name="imgEmpresa"
+                        requerid>
+                </div>
+                
+                <div class="form-group">
+                    <label for="nombreEmpresa">Nombre de la Empresa</label>
+                    <input type="text" class="form-control" id="nombreEmpresa" 
+                        name="nombreEmpresa" required>
+                </div>
+                <div class="form-group">
+    
+                    <label for="periodoPuestoFin">Fin del Puesto</label>
+                    <input type="text" class="form-control" id="periodoPuestoFin" 
+                        name="periodoPuestoFin" required>
+                </div>
+                <div class="form-group">
+                    <label for="periodoPuestoInicio">Inicio del puesto</label>
+                    <input type="text" class="form-control" id="periodoPuestoInicio" 
+                        name="periodoPuestoInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="puesto">Puesto</label>
+                    <input type="text" class="form-control" id="puesto"  name="puesto" required>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>

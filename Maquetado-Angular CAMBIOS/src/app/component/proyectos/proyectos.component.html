@@ -1,0 +1,125 @@
+<div class="container">
+    <!-- Proyectos -->
+
+    <div id="Proyectos" class="row">
+        <div class="row">
+            <div class="col-6">
+                <h3>Proyectos</h3>
+            </div>
+            <div class="col-6 ">
+                <h4 class="text-end "><i class="bi bi-file-earmark-plus" data-bs-toggle="modal"
+                    data-bs-target="#AgregarProyectos"></i>
+                </h4>
+            </div>
+        </div>
+
+        <div class="row d-flex justify-content-around">
+                <div class="col-auto ">
+                    <div id="Proyectocolor1" class="card" style="width: 16rem;">
+                        <img [src]="miPortfolio.proyectos.urlImgProyecto" class="card-img-top" alt="{{miPortfolio.proyectos.nombreProyecto}}">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <h5 class="card-title">{{miPortfolio.proyectos.nombreProyecto}} </h5>
+                                </div>
+                                <div class="col-6">
+                                    <h5 class="text-end"> <i class="bi bi-pencil-square p-1" data-bs-toggle="modal"
+                                        data-bs-target="#editarProyectos"></i><i
+                                            class="bi bi-trash3-fill"></i></h5>
+                                </div>
+                            </div>
+                            <p class="card-text">{{miPortfolio.proyectos.descripcionProyecto}}</p>
+                            <a href="{{miPortfolio.proyectos.urlRepositorio}}" class="btn btn-warning d-grid m-1">Repositorio</a>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+
+    </div>
+
+
+</div>
+
+<!-- Modal Agregar -->
+<div class="modal fade" id="AgregarProyectos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Proyectos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+                <div class="form-group">
+                    <label for="nombreProyecto">Nombre Proyecto</label>
+                    <input type="text" class="form-control" id="nombreProyecto" 
+                        name="nombreProyecto" requerid>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionProyecto">Descripcion Proyecto</label>
+                    <input type="text" class="form-control" id="descripcionProyecto"  name="descripcionProyecto"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="urlImgProyecto">Imagen del Proyecto</label>
+                    <input type="text" class="form-control" id="urlImgProyecto"
+                        name="urlImgProyecto" required>
+                </div>
+                <div class="form-group">
+
+                    <label for="urlRepositorio">Url Repositorio</label>
+                    <input type="text" class="form-control" id="urlRepositorio" 
+                        name="urlRepositorio" required>
+                </div>
+
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Editar -->
+<div class="modal fade" id="editarProyectos" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Proyectos</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+                <div class="form-group">
+                    <label for="nombreProyecto">Nombre Proyecto</label>
+                    <input type="text" class="form-control" id="nombreProyecto" 
+                        name="nombreProyecto" requerid>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionProyecto">Descripcion Proyecto</label>
+                    <input type="text" class="form-control" id="descripcionProyecto"  name="descripcionProyecto"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="urlImgProyecto">Imagen del Proyecto</label>
+                    <input type="text" class="form-control" id="urlImgProyecto"
+                        name="urlImgProyecto" required>
+                </div>
+                <div class="form-group">
+
+                    <label for="urlRepositorio">Url Repositorio</label>
+                    <input type="text" class="form-control" id="urlRepositorio" 
+                        name="urlRepositorio" required>
+                </div>
+                
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>

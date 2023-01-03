@@ -1,0 +1,372 @@
+<div class="container">
+    <!-- Progress -->
+    <div class="row my-5">
+        <h3>Hard & Soft Skills</h3>
+
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
+
+            <!--FrontEnd-->
+            <div class="row">
+                <div class="col-6">
+                    <h3>FrontEnd</h3>
+                </div>
+
+                <div class="col-6 ">
+                    <h4 class="text-end ">
+                        <i class="bi bi-file-earmark-plus" data-bs-toggle="modal"
+                        data-bs-target="#AgregarFE"></i>
+                    </h4>
+                </div>
+            </div>
+            <ul class="Moditems">
+                <li>
+                    <div class="pt-2">
+                        <div class="row">
+                            <div class="col-9">
+                                <h4><i class={{miPortfolio.skillFrontEnd.icono}}></i>
+                                    {{miPortfolio.skillFrontEnd.nombreFrontEnd}}</h4>
+                            </div>
+
+                            <div class="col-3 ">
+                                <h4 class="text-end ">
+                                    <i class="bi bi-pencil-square p-1" data-bs-toggle="modal"
+                                    data-bs-target="#editarFE"></i>
+                                    <i class="bi bi-trash3-fill"></i>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-label="Success example"
+                                [style.width]=" miPortfolio.skillFrontEnd.porcentaje +'%'" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100">{{miPortfolio.skillFrontEnd.nivelFrontEnd}}</div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <!-- BackEnd-->
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
+            <div class="row">
+                <div class="col-6">
+                    <h3>BackEnd</h3>
+                </div>
+                <div class="col-6 ">
+                    <h4 class="text-end ">
+                        <i class="bi bi-file-earmark-plus p-1" data-bs-toggle="modal"
+                        data-bs-target="#agregarBE"></i>
+                    </h4>
+                </div>
+            </div>
+
+            <ul class="Moditems">
+                <li>
+                    <div class="row pt-2">
+                        <div class="col-9">
+                            <h4><i class={{miPortfolio.skillBackEnd.icono}}></i>
+                                {{miPortfolio.skillBackEnd.nombreBackEnd}}</h4>
+                        </div>
+
+                        <div class="col-3 ">
+                            <h4 class="text-end ">
+                                <i class="bi bi-pencil-square p-1" data-bs-toggle="modal"
+                                data-bs-target="#editarBE"></i>
+                                <i class="bi bi-trash3-fill"></i>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" aria-label="Success example"
+                            [style.width]=" miPortfolio.skillBackEnd.porcentaje +'%' " aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">{{miPortfolio.skillBackEnd.nivelBackEnd}}</div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="col-sm-12 col-md-4 col-lg-4 mt-2">
+
+            <div class="row">
+                <div class="col-6">
+                    <h3>SoftSkill</h3>
+                </div>
+                <div class="col-6 ">
+                    <h4 class="text-end ">
+                        <i class="bi bi-file-earmark-plus" data-bs-toggle="modal"
+                        data-bs-target="#AgregarSoftSkill"></i>
+
+                    </h4>
+                </div>
+            </div>
+
+            <ul class="Moditems">
+                <li>
+                    <div class="row pt-2">
+                        <div class="col-9">
+                            <h4><i class={{miPortfolio.softSkill.cono}}></i> {{miPortfolio.softSkill.nombreSkill}}</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4 class="text-end">
+                                <i class="bi bi-pencil-square p-1" data-bs-toggle="modal"
+                                data-bs-target="#editarSoftSkill"></i>
+                                <i class="bi bi-trash3-fill"></i>
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" aria-label="Success example"
+                            [style.width]=" miPortfolio.softSkill.porcentaje +'%'" aria-valuenow="25" aria-valuemin="0"
+                            aria-valuemax="100">{{miPortfolio.softSkill.nivelSkill}}</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Agregar FrontEnd -->
+<div class="modal fade" id="AgregarFE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar FrontEnd</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+
+                <div class="form-group">
+                    <label for="icono">Icono</label>
+                    <input type="text" class="form-control" id="icono" name="icono"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreFrontEnd">Nombre de la Skill Front End</label>
+                    <input type="text" class="form-control" id="nombreFrontEnd"  name="nombreFrontEnd"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="nivelFrontEnd">Nivel Skill Front End</label>
+                    <input type="text" class="form-control" id="nivelFrontEnd" 
+                        name="nivelFrontEnd" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje</label>
+                    <input type="text" class="form-control" id="porcentaje"
+                        name="porcentaje" required>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Editar FrontEnd -->
+<div class="modal fade" id="editarFE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Editar FrontEnd</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+                <div class="form-group">
+                    <label for="icono">Icono</label>
+                    <input type="text" class="form-control" id="icono" name="icono"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreFrontEnd">Nombre de la Skill Front End</label>
+                    <input type="text" class="form-control" id="nombreFrontEnd"  name="nombreFrontEnd"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="nivelFrontEnd">Nivel Skill Front End</label>
+                    <input type="text" class="form-control" id="nivelFrontEnd" 
+                        name="nivelFrontEnd" required>
+                </div>
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje</label>
+                    <input type="text" class="form-control" id="porcentaje"
+                        name="porcentaje" required>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Agregar BackEnd -->
+<div class="modal fade" id="agregarBE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar BackEnd</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+                <div class="form-group">
+                    <label for="icono">Icono</label>
+                    <input type="text" class="form-control" id="icono"  name="icono"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreBackEnd">Nombre de la skill Back End</label>
+                    <input type="text" class="form-control" id="nombreBackEnd"  name="nombreBackEnd"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="nivelBackEnd">Nivel Skill Back End</label>
+                    <input type="text" class="form-control" id="nivelBackEnd" 
+                        name="nivelBackEnd" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje</label>
+                    <input type="text" class="form-control" id="porcentaje"
+                        name="porcentaje" required>
+                </div>
+
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Editar -->
+<div class="modal fade" id="editarBE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Editar BackEnd</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+
+                <div class="form-group">
+                    <label for="icono">Icono</label>
+                    <input type="text" class="form-control" id="icono"  name="icono"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreBackEnd">Nombre de la skill Back End</label>
+                    <input type="text" class="form-control" id="nombreBackEnd"  name="nombreBackEnd"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="nivelBackEnd">Nivel Skill Back End</label>
+                    <input type="text" class="form-control" id="nivelBackEnd" 
+                        name="nivelBackEnd" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="porcentaje">Porcentaje</label>
+                    <input type="text" class="form-control" id="porcentaje"
+                        name="porcentaje" required>
+                </div>
+
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Agregar -->
+<div class="modal fade" id="AgregarSoftSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Soft Skill </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+
+                <div class="form-group">
+                    <label for="icono">Icono</label>
+                    <input type="text" class="form-control" id="icono" name="icono"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreSkill">Nombre de la Skill</label>
+                    <input type="text" class="form-control" id="nombreSkill"  name="nombreSkill"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="nivelSkill">Nivel Skill</label>
+                    <input type="text" class="form-control" id="nivelSkill" 
+                        name="nivelSkill" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="porcentaje">porcentaje</label>
+                    <input type="text" class="form-control" id="porcentaje"
+                        name="porcentaje" required>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Editar SoftSkill -->
+<div class="modal fade" id="editarSoftSkill" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header custom">
+                <h5 class="modal-title" id="exampleModalLabel">Editar Soft Skill</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body custom">
+                
+                <div class="form-group">
+                    <label for="icono">Icono</label>
+                    <input type="text" class="form-control" id="icono" name="icono"
+                        requerid>
+                </div>
+                <div class="form-group">
+                    <label for="nombreSkill">Nombre de la Skill</label>
+                    <input type="text" class="form-control" id="nombreSkill"  name="nombreSkill"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="nivelSkill">Nivel Skill</label>
+                    <input type="text" class="form-control" id="nivelSkill" 
+                        name="nivelSkill" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="porcentaje">porcentaje</label>
+                    <input type="text" class="form-control" id="porcentaje"
+                        name="porcentaje" required>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-center" id="Custom">
+                <button type="submit" class="btn btn-warning " data-bs-dismiss="modal">Actualizar informacion</button>
+
+            </div>
+        </div>
+    </div>
+</div>
